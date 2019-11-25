@@ -1,0 +1,27 @@
+"""Given a square matrix of N rows and columns, find out whether it is symmetric or not.
+
+Input Format:
+The first line of the input contains an integer number n which represents the number of rows and the number of columns.
+From the second line, take n lines input with each line containing n integer elements with each element separated by a space.
+
+Output Format:
+Print 'YES' if it is symmetric otherwise 'NO'"""
+
+
+h=int(input())
+l=[]
+k=[]
+for i in range(h):
+    new_l=[int(x)for x in input().split()]
+    l.append(new_l)
+
+for i in range(len(l)):
+    a=[]
+    for j in range(len(l)):
+       a.append(l[j][i])
+    k.append(a) 
+
+if k==l:
+    print("YES",end="")
+else:
+    print("NO",end="")
